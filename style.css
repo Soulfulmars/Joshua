@@ -1,0 +1,304 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+    background-image: url('Blue-Backgrounds-HD.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat
+}
+
+.image {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 200px; 
+}
+
+.image img {
+  width: 150px; 
+  height: 150px; 
+  object-fit: contain;
+  border-radius: 100px; 
+  transition:0.3s ;
+  transform: 0.3s ease-in-out;
+}
+
+.image p {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.anime-image {
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#skills {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 40px;
+  padding: 50px; 
+  margin-top: 50px; 
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.skills img {
+  width: 200px; 
+  height: 200px; 
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  height: 100px;
+  padding: 10px 0;
+}
+
+#showMenu {
+  display: none;
+}
+
+p {
+  font-size: 25px;
+  max-height: 100px; 
+  overflow: hidden; 
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: left 0.3s ease-in-out;
+}
+
+.show-menu {
+  left: 0 !important;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 20px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    left: 0 !important;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  #showMenu, #closeMenu {
+    display: none;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    top: -70px; 
+    transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
+    z-index: 1000;
+  }
+
+  .show-header {
+    top: 0;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition:0.3s;
+     background: 0.3s ease;
+  }
+
+  nav ul li:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .hidden {
+    transform: translateY(-100%);
+  }
+ 
+  #showMenu {
+    display: none;
+  }
+
+  .menu-hidden #showMenu {
+    display: block;
+  }
+
+  header nav ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  header nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+
+  section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  #home .profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .project img, .project video {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  #image {
+    width: 150px; 
+    height: auto;  
+    border: 2px solid black;  
+    border-radius: 8px;  
+    display: block;  
+    margin: 10px auto;  
+  }
+
+  
+
+  a {
+    text-decoration: none;
+    color: rgb(161, 161, 161);
+    font-size: 25px;
+  }
+
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}
+
+h1 {
+  transform: scale(1.2);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+  font-size: 25px;
+  margin-top: 60px;
+  top: -30px;
+}
+
+h2 {
+  transform: scale(1.2);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+  font-size: 30px;
+  top: -30px;
+  text-align: center;
+}
+
+.anime-image {
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.anime-image:hover {
+  transform: scale(1.1);
+}
+ 
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  border: 2px solid white;
+  margin: 50px auto; 
+  padding: 20px;
+  max-width: 600px; 
+  border-radius: 10px;
+}
+
+#contact p {
+  margin-bottom: 20px; 
+}
+
+form {
+  width: 100%; 
+}

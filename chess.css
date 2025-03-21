@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+.image {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 100px auto;
+  border-radius: 100px;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  top: -70px; /* Initially hidden */
+  transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+/* Show header when scrolling up */
+.show-header {
+  top: 0;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+}
+
+
+nav ul li {
+  margin: 0 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  background :0.3s ease;
+}
+
+nav ul li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Hide menu when scrolling down */
+.hidden {
+  transform: translateY(-100%);
+}
+
+/* Show Menu Button */
+#showMenu {
+  
+  display: none;
+}
+
+/* Show the button when navbar is hidden */
+.menu-hidden #showMenu {
+  display: block;
+}
+
+
+
+header nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#home .profile-picture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.project img, .project video {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+
+/* Chessboard Container */
+.chessboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;
+  height: 640px;
+  margin: 20px auto;
+  border: 5px solid black;
+}
+
+/* Chess Squares */
+.chessboard div {
+  width: 12.5%; /* 1/8th of the board */
+  height: 12.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Alternate Square Colors */
+.chessboard div:nth-child(odd) {
+  background-color: #f0d9b5; /* Light (Peach-like) */
+}
+
+.chessboard div:nth-child(even) {
+  background-color: #b58863; /* Dark (Brown) */
+}
+
+/* Ensure alternating colors in rows */
+.chessboard div:nth-child(16n + 1),
+.chessboard div:nth-child(16n + 3),
+.chessboard div:nth-child(16n + 5),
+.chessboard div:nth-child(16n + 7),
+.chessboard div:nth-child(16n + 10),
+.chessboard div:nth-child(16n + 12),
+.chessboard div:nth-child(16n + 14),
+.chessboard div:nth-child(16n + 16) {
+  background-color: #b58863; /* Dark */
+}
+
+.chessboard div:nth-child(16n + 2),
+.chessboard div:nth-child(16n + 4),
+.chessboard div:nth-child(16n + 6),
+.chessboard div:nth-child(16n + 8),
+.chessboard div:nth-child(16n + 9),
+.chessboard div:nth-child(16n + 11),
+.chessboard div:nth-child(16n + 13),
+.chessboard div:nth-child(16n + 15) {
+  background-color: #f0d9b5; /* Light */
+}
